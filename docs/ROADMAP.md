@@ -56,7 +56,7 @@ Skills land in a sibling repo (`1bit-systems/1bit.skills` or equivalent), not in
 
 ### 2.5 The "Human 3.0" stance — go full measures or it doesn't work
 
-External thinkers on human-AI augmentation frame the current transition as "Human 3.0" or similar (citation pending — see [open question](#5-open-roadmap-questions)). The position taken here is: this transition only works if you commit fully. Half-measures that try to preserve the worst parts of office work — HR bureaucracy, machine-to-machine procurement, autonomous agent commerce, paperwork theater — won't reach 3.0. They just churn 2.0 with more friction and more API calls.
+Don Messler frames the current transition into AI-augmented work as **"Human 3.0"** — and the position taken here aligns with his framing: this transition only works if you commit fully. Half-measures that try to preserve the worst parts of office work — HR bureaucracy, machine-to-machine procurement, autonomous agent commerce, paperwork theater — won't reach 3.0. They just churn 2.0 with more friction and more API calls.
 
 Full measures: **humans physical, AI administrative, no M2M, no HR.**
 
@@ -88,10 +88,9 @@ Full measures: **humans physical, AI administrative, no M2M, no HR.**
 
 These are tracked here, not in the main spec, because they shape the *family* posture rather than `v0.1.0-bench` specifically.
 
-1. **"Human 3.0" attribution.** Which thinker(s) get cited for the framing in §2.5? Pending confirmation before any external name lands in a public commit.
-2. **`1bit.skills` repo placement.** Sibling repo (`1bit-systems/1bit.skills`) or a subdirectory in this one? Subdirectory keeps everything together; sibling lets skills evolve independent of cashier releases. Decide before the first skill ships.
-3. **Audit-log schema as a public contract.** If `1bit.ledger` consumes 1bit.cashier exports, the export format becomes a versioned contract. Worth a schema-versioning section in `docs/DEPLOY.md` before `v0.4.0`.
-4. **Tax surface for non-NB / non-Canada deployments.** Pilot is NB. If anyone forks `1bit.cashier` outside Canada, the GST/HST/PST assumptions need pluggable tax modules. Defer until a non-Canadian deployment is real.
+1. **`1bit.skills` repo placement.** Sibling repo (`1bit-systems/1bit.skills`) or a subdirectory in this one? Subdirectory keeps everything together; sibling lets skills evolve independent of cashier releases. Decide before the first skill ships.
+2. **Audit-log schema as a public contract.** If `1bit.ledger` consumes 1bit.cashier exports, the export format becomes a versioned contract. Worth a schema-versioning section in `docs/DEPLOY.md` before `v0.4.0`.
+3. **Tax surface for non-NB / non-Canada deployments.** Pilot is NB. If anyone forks `1bit.cashier` outside Canada, the GST/HST/PST assumptions need pluggable tax modules. Defer until a non-Canadian deployment is real.
 
 ---
 
