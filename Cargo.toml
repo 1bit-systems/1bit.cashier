@@ -1,9 +1,17 @@
 [workspace]
 resolver = "2"
-members = []
+members = [
+    "crates/cashier-bus",
+    "crates/cashier-order",
+    "crates/cashier-vision",
+    "crates/cashier-audio",
+    "crates/cashier-recycler",
+    "crates/cashier-audit",
+    "apps/cashier-pos",
+]
 
 [workspace.package]
-version = "0.0.0"
+version = "0.1.0"
 edition = "2024"
 license = "AGPL-3.0-only"
 repository = "https://github.com/1bit-systems/1bit.cashier"
@@ -21,7 +29,10 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 async-trait = "0.1"
 uuid = { version = "1", features = ["v4", "serde"] }
 chrono = { version = "0.4", features = ["serde"] }
+axum = { version = "0.7", features = ["ws"] }
+clap = { version = "4", features = ["derive"] }
+futures = "0.3"
 
-# Crate skeletons are added per the design spec at
-# docs/specs/2026-05-13-1bit-cashier-design.md
-# during the v0.1.0-bench milestone.
+# Dev-only across the workspace
+[workspace.dependencies.tokio-test]
+version = "0.4"
