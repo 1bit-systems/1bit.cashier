@@ -28,7 +28,7 @@ No crypto. Real paper, real coins, local inference, no cloud on the hot path.
 
 ## Design
 
-Full architecture in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). Canonical design spec in [`docs/superpowers/specs/`](docs/superpowers/specs/). Hardware bill-of-materials in [`docs/HARDWARE.md`](docs/HARDWARE.md). Deployment guide in [`docs/DEPLOY.md`](docs/DEPLOY.md).
+Full architecture in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). Canonical design spec in [`docs/specs/`](docs/specs/). Hardware bill-of-materials in [`docs/HARDWARE.md`](docs/HARDWARE.md). Deployment guide in [`docs/DEPLOY.md`](docs/DEPLOY.md).
 
 ## Roadmap and philosophy
 

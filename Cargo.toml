@@ -23,5 +23,5 @@ uuid = { version = "1", features = ["v4", "serde"] }
 chrono = { version = "0.4", features = ["serde"] }
 
 # Crate skeletons are added per the design spec at
-# docs/superpowers/specs/2026-05-13-1bit-cashier-design.md
+# docs/specs/2026-05-13-1bit-cashier-design.md
 # during the v0.1.0-bench milestone.

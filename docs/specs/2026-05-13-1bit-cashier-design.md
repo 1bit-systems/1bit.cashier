@@ -230,7 +230,7 @@ Mi'kmaq Listuguj uses Latin letters + apostrophe + acute accents — covered by 
 │   ├── ARCHITECTURE.md
 │   ├── HARDWARE.md
 │   ├── DEPLOY.md
-│   └── superpowers/specs/    # design specs (this file lives here)
+│   └── specs/    # design specs (this file lives here)
 ├── Cargo.toml                # workspace
 ├── README.md
 ├── LICENSE                   # AGPL-3.0
@@ -357,7 +357,7 @@ Aligns 1bit.cashier with 1bit.systems convention. Python permitted only in `/tra
 Handoff's Phase 1 was a "bench MVP" without a release framing. For a public project, the first taggable artifact that anyone can clone and run is a load-bearing milestone — it's the visible product before any hardware is procured.
 
 ### D6. `docs/` directory structure.
-Handoff didn't address documentation layout. Public project demands more than a README: `docs/ARCHITECTURE.md` (evergreen), `docs/HARDWARE.md` (BOM), `docs/DEPLOY.md` (env vars / systemd), `docs/superpowers/specs/` (canonical design specs including this one).
+Handoff didn't address documentation layout. Public project demands more than a README: `docs/ARCHITECTURE.md` (evergreen), `docs/HARDWARE.md` (BOM), `docs/DEPLOY.md` (env vars / systemd), `docs/specs/` (canonical design specs including this one).
 
 ### D7. Localization is a first-class section (new §6).
 Handoff was silent on language. NB defaults to English/French bilingual; this project explicitly chooses **English + Mi'kmaq (Listuguj)**, no French. Audio input remains English-only for v0.1–v0.4 because Mi'kmaq STT doesn't yet exist. Display/receipt are bilingual switchable from v0.1.
@@ -368,7 +368,7 @@ Handoff phases were time-bound. Adding semver tags (`v0.1.0-bench` → `v1.0.0`)
 ## 14. References
 
 - **Source handoff:** `~/Documents/HANDOFF.md` (2026-05-13). Authoritative for subsystem responsibilities, hardware choices, failure modes, and success criteria. This spec extends and adapts it; deviations listed in §13.
-- **Family roadmap and philosophy:** [`docs/ROADMAP.md`](../../ROADMAP.md). Covers the broader 1bit.systems family (1bit.cashier, 1bit.ledger, 1bit.tax, 1bit.payroll — minus HR by design) and the anti-M2M, skills-over-MCP, humans-physical / AI-administrative stance that scopes the whole family.
+- **Family roadmap and philosophy:** [`docs/ROADMAP.md`](../ROADMAP.md). Covers the broader 1bit.systems family (1bit.cashier, 1bit.ledger, 1bit.tax, 1bit.payroll — minus HR by design) and the anti-M2M, skills-over-MCP, humans-physical / AI-administrative stance that scopes the whole family.
 - **Sibling family:** [1bit.systems](https://1bit.systems) — brand parent, no shared codebase.
 - **Glory CashInfinity API** — buy/spec the CI-10 unit; lead time is the long pole, order day one.
 - **Mi'kmaq Listuguj orthography** — local language standard for NB / Gaspé Mi'kmaq communities.
@@ -376,4 +376,4 @@ Handoff phases were time-bound. Adding semver tags (`v0.1.0-bench` → `v1.0.0`)
 
 ---
 
-*End of spec. Updates land as a new dated file in `docs/superpowers/specs/`; this one stays as the v0.1.0 baseline.*
+*End of spec. Updates land as a new dated file in `docs/specs/`; this one stays as the v0.1.0 baseline.*

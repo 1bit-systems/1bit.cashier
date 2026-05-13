@@ -1,6 +1,6 @@
 # 1bit.cashier — Roadmap
 
-This roadmap covers two layers: the **family** of related projects that 1bit.cashier sits inside, and the **philosophy** that explains why the family is shaped this way. For the milestone plan of *this* repo specifically (`v0.1.0-bench` → `v1.0.0`), see [the design spec, §8](superpowers/specs/2026-05-13-1bit-cashier-design.md#8-phase-plan--milestones).
+This roadmap covers two layers: the **family** of related projects that 1bit.cashier sits inside, and the **philosophy** that explains why the family is shaped this way. For the milestone plan of *this* repo specifically (`v0.1.0-bench` → `v1.0.0`), see [the design spec, §8](specs/2026-05-13-1bit-cashier-design.md#8-phase-plan--milestones).
 
 ---
 
