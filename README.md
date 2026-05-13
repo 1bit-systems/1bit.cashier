@@ -30,6 +30,12 @@ No crypto. Real paper, real coins, local inference, no cloud on the hot path.
 
 Full architecture in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). Canonical design spec in [`docs/superpowers/specs/`](docs/superpowers/specs/). Hardware bill-of-materials in [`docs/HARDWARE.md`](docs/HARDWARE.md). Deployment guide in [`docs/DEPLOY.md`](docs/DEPLOY.md).
 
+## Roadmap and philosophy
+
+1bit.cashier is the first module in a larger family covering accounting, taxes, and payroll — but not HR. The family follows a deliberate stance: **humans do the physical work, AI does the cognitive-administrative work, machines never talk to other machines.** Tooling integrates via Claude Code skills, not MCP servers.
+
+Full family scope, sibling repos, and philosophy in [`docs/ROADMAP.md`](docs/ROADMAP.md).
+
 ## Running the demo (planned, v0.1.0-bench)
 
 ```sh

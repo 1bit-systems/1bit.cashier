@@ -368,6 +368,7 @@ Handoff phases were time-bound. Adding semver tags (`v0.1.0-bench` → `v1.0.0`)
 ## 14. References
 
 - **Source handoff:** `~/Documents/HANDOFF.md` (2026-05-13). Authoritative for subsystem responsibilities, hardware choices, failure modes, and success criteria. This spec extends and adapts it; deviations listed in §13.
+- **Family roadmap and philosophy:** [`docs/ROADMAP.md`](../../ROADMAP.md). Covers the broader 1bit.systems family (1bit.cashier, 1bit.ledger, 1bit.tax, 1bit.payroll — minus HR by design) and the anti-M2M, skills-over-MCP, humans-physical / AI-administrative stance that scopes the whole family.
 - **Sibling family:** [1bit.systems](https://1bit.systems) — brand parent, no shared codebase.
 - **Glory CashInfinity API** — buy/spec the CI-10 unit; lead time is the long pole, order day one.
 - **Mi'kmaq Listuguj orthography** — local language standard for NB / Gaspé Mi'kmaq communities.
