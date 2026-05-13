@@ -1,0 +1,39 @@
+# Rust
+/target/
+**/target/
+**/*.rs.bk
+*.pdb
+
+# Local config / secrets
+.env
+.env.*
+!.env.example
+
+# Real-shop dataset (lives outside the repo per CASHIER_CATALOG_PATH)
+/local/
+/private/
+
+# Editor / OS
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+*.iml
+
+# Python (training scripts only)
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Build artifacts
+*.tar.gz
+*.zip
+node_modules/
+
+# Audit / runtime artifacts (never committed)
+/audit/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
