@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "currency": "CAD",
+  "products": [
+    {
+      "sku": "DEMO-001",
+      "name_en": "Coffee, medium",
+      "name_mikq_lj": "Kuti'sk",
+      "unit_price_cents": 350,
+      "ref_image": "ref-images/demo-001.png"
+    },
+    {
+      "sku": "DEMO-002",
+      "name_en": "Croissant",
+      "name_mikq_lj": "Pipnaqn",
+      "unit_price_cents": 425,
+      "ref_image": "ref-images/demo-002.png"
+    },
+    {
+      "sku": "DEMO-003",
+      "name_en": "Apple",
+      "name_mikq_lj": "Wenju'su'n",
+      "unit_price_cents": 100,
+      "ref_image": "ref-images/demo-003.png"
+    },
+    {
+      "sku": "DEMO-004",
+      "name_en": "Spring water, 500mL",
+      "name_mikq_lj": "Samqwan",
+      "unit_price_cents": 250,
+      "ref_image": "ref-images/demo-004.png"
+    }
+  ]
+}
