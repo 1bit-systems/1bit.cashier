@@ -5,10 +5,12 @@
 //! Cart and order state machine.
 
 pub mod cart;
+pub mod engine;
 pub mod error;
 pub mod state;
 
 pub use cart::{Cart, CartLine};
+pub use engine::{Catalog, CatalogEntry, OrderEngine};
 pub use error::OrderError;
 pub use state::{OrderState, StateMachine, Transition};
 
