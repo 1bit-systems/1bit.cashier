@@ -1,0 +1,30 @@
+[package]
+name = "cashier-pos"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "cashier-pos"
+path = "src/main.rs"
+
+[dependencies]
+cashier-bus = { path = "../../crates/cashier-bus" }
+cashier-order = { path = "../../crates/cashier-order" }
+cashier-vision = { path = "../../crates/cashier-vision" }
+cashier-audio = { path = "../../crates/cashier-audio" }
+cashier-recycler = { path = "../../crates/cashier-recycler" }
+cashier-audit = { path = "../../crates/cashier-audit" }
+tokio = { workspace = true }
+clap = { workspace = true }
+axum = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+uuid = { workspace = true }
+chrono = { workspace = true }
+anyhow = { workspace = true }
+futures = { workspace = true }
