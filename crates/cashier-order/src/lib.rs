@@ -6,9 +6,11 @@
 
 pub mod cart;
 pub mod error;
+pub mod state;
 
 pub use cart::{Cart, CartLine};
 pub use error::OrderError;
+pub use state::{OrderState, StateMachine, Transition};
 
 #[cfg(test)]
 mod cart_tests {
@@ -74,5 +76,65 @@ mod cart_tests {
         assert_eq!(removed.sku, "DEMO-001");
         assert_eq!(cart.lines().len(), 1);
         assert_eq!(cart.lines()[0].sku, "DEMO-002");
+    }
+}
+
+#[cfg(test)]
+mod state_tests {
+    use super::*;
+    use crate::error::OrderError;
+
+    #[test]
+    fn new_machine_is_idle() {
+        let m = StateMachine::new();
+        assert_eq!(m.state(), OrderState::Idle);
+    }
+
+    #[test]
+    fn idle_to_building_via_start_building() {
+        let mut m = StateMachine::new();
+        m.apply(Transition::StartBuilding).unwrap();
+        assert_eq!(m.state(), OrderState::Building);
+    }
+
+    #[test]
+    fn building_to_review_to_awaiting_to_paying_to_complete() {
+        let mut m = StateMachine::new();
+        m.apply(Transition::StartBuilding).unwrap();
+        m.apply(Transition::StartReview).unwrap();
+        assert_eq!(m.state(), OrderState::Review);
+        m.apply(Transition::StartAwaitingPayment).unwrap();
+        assert_eq!(m.state(), OrderState::AwaitingPayment);
+        m.apply(Transition::StartPaying).unwrap();
+        assert_eq!(m.state(), OrderState::Paying);
+        m.apply(Transition::Finalize).unwrap();
+        assert_eq!(m.state(), OrderState::Complete);
+    }
+
+    #[test]
+    fn complete_to_idle_via_reset() {
+        let mut m = StateMachine::new();
+        m.apply(Transition::StartBuilding).unwrap();
+        m.apply(Transition::StartReview).unwrap();
+        m.apply(Transition::StartAwaitingPayment).unwrap();
+        m.apply(Transition::StartPaying).unwrap();
+        m.apply(Transition::Finalize).unwrap();
+        m.apply(Transition::Reset).unwrap();
+        assert_eq!(m.state(), OrderState::Idle);
+    }
+
+    #[test]
+    fn invalid_transition_from_idle_to_paying_errors() {
+        let mut m = StateMachine::new();
+        let err = m.apply(Transition::StartPaying).unwrap_err();
+        assert!(matches!(err, OrderError::InvalidTransition { .. }));
+        assert_eq!(m.state(), OrderState::Idle);
+    }
+
+    #[test]
+    fn reset_from_idle_is_no_op() {
+        let mut m = StateMachine::new();
+        m.apply(Transition::Reset).unwrap();
+        assert_eq!(m.state(), OrderState::Idle);
     }
 }
