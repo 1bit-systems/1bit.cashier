@@ -4,7 +4,17 @@
 
 //! Event bus types and trait for the 1bit.cashier subsystems.
 
+pub mod bus;
+pub mod error;
+pub mod events;
 pub mod language;
+pub mod memory;
+
+pub use bus::EventBus;
+pub use error::BusError;
+pub use events::{Event, EventEnvelope};
+pub use language::Language;
+pub use memory::MemoryBus;
 
 #[cfg(test)]
 mod language_tests {
@@ -27,8 +37,6 @@ mod language_tests {
         assert_eq!(Language::default(), Language::English);
     }
 }
-
-pub mod events;
 
 #[cfg(test)]
 mod event_tests {
